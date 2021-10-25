@@ -119,7 +119,6 @@ void TextToWord(char line[LINE_MAX], ListWord *list){
             }else{
                
                     j = 0;
-                    //printf("%s\n", tmpword);
                     
                     if(LookForelement(list, tmpword)){
 
@@ -127,8 +126,7 @@ void TextToWord(char line[LINE_MAX], ListWord *list){
                     	insert(list,  tmpword);
 
                           }
-                     memset(&tmpword[0], 0, sizeof(tmpword));
-                    //strcpy(tmpword, " ");// make empty tmpword
+                     memset(&tmpword[0], 0, sizeof(tmpword));// make empty tmpword
         }
 		i++;
     }
@@ -137,7 +135,24 @@ void TextToWord(char line[LINE_MAX], ListWord *list){
 
 /******************************************/
 
+int TotalWord(ListWord *list)
+{
+	int sum = 0;
 
+    if (list == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    Word *act = list->first;
+
+    while (act != NULL)
+    {
+        sum+= act->count;
+        act = act->next;
+    }
+  return sum;
+}
 
 
 

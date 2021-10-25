@@ -37,6 +37,7 @@ int main(int argc, char* argv[]){
 
 
    printList(list);
+   printf("%d total words \n", TotalWord(list));
    Clear(list);
    free(list);
    return 0;

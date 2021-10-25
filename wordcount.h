@@ -43,8 +43,8 @@ void TextToWord(char [LINE_MAX], ListWord *list);
 /*  Looking for element in list , return true if element was founed     */
 bool LookForelement(ListWord *, char [N]);
 
-
-
+/* Compt all word in the list */
+int TotalWord(ListWord *);
 
 
 
