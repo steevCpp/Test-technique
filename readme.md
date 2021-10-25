@@ -10,8 +10,11 @@ Make
 ```
 ## Algorithme
 On crée une liste chaînée (une pile)) qui va contenir trois champs:
+
 	String qui est le mot à stocker;
+
 	count qui est le nombre de fois que le mot apparaît dans le texte.
+
 	next qui est un pointeur vers l'élément suivant.
 
 On ouvre le fichier et on parcourt ligne par ligne(les lignes commençants par # ou ' ' sont ignorées).
