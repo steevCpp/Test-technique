@@ -2,44 +2,37 @@
 #include<stdlib.h>
 #include<string.h>
 #include"wordcount.h"
-//#define N 10 //Max word size
-
-//#define LINE_MAX 100
-
 
 
 int main(int argc, char* argv[]){
 
     FILE* fichier = NULL;
 
-    int caractereActuel = 0;
+
     char tmpword[N] =" ";
-    int i = 0; //Iterator 
     char chaine[LINE_MAX] = "";
 
 
-    ListWord *list = initialisation();
+    ListWord *list = initialisation();//structure control initilization 
 
   for(int j=1;j<argc;j++){
     fichier = fopen(argv[j], "r");
 
     if (fichier != NULL)
     {   
-        while (fgets(chaine, LINE_MAX, fichier) != NULL) // On lit le fichier 
+        while (fgets(chaine, LINE_MAX, fichier) != NULL) // On lit le fichier ligne par ligne
         {
             if(chaine[0] == '#' || chaine[0] == ' ') continue;
-            //printf("%s", chaine); // On affiche la chaîne qu'on vient de lire
 
-			TextToWord(chaine, list);
+			TextToWord(chaine, list);//adding words in the list
         }
-		
         fclose(fichier); //Close the file
     }
   }
 
-   printList(list);
+   printList(list);//print all elements in the list
    printf("%d total words \n", TotalWord(list));
    Clear(list);
-   free(list);
+   free(list);//free control structure memory
    return 0;
 }

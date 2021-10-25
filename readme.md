@@ -25,12 +25,18 @@ Dans chaque ligne on parcourt caractère par cractère, et on stocke dans tmpwor
 Si le caractère suivant est un ' ' alors, on l'ignore et on ajoute tmpword dans un nouveau noeud de la liste.
 
 ## Limitation
-Pour que ce programme affiche des resultats corrects, il faudrait que:
+Cas non gérées:
 	
-	Dans le fichier texte, il n'y a qu'une phrase par ligne.
+	Dans le fichier texte, il n'y ait qu'une phrase par ligne.
 
-	Il n'y ait pas d'espace au début des lignes.
+	Il n'y ait pas d'espace au début des lignes et des virgules.
 
 	Il est sensible à a casses.
-	
+
+## Extension
+
+Pour optimiser les performances, on peut faire du paralléliste.
+
+On attribue à chaque processus un certain nombre de fichiers textes, ils effectuent le traitement et une collecte est faite à la fin reconstituer le resultat final.
+
 

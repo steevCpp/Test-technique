@@ -11,7 +11,6 @@
 ListWord *initialisation()
 {
     ListWord *list = malloc(sizeof(*list));
-    //Word *word = malloc(sizeof(*word));
 
     if (list == NULL ) /*allocation fail */
     {
@@ -68,7 +67,7 @@ bool LookForelement(ListWord *list, char tmpword[N])
 
     while (act != NULL)
     {
-        //printf("%s\n ",act->String);
+        
 		if (!strcmp(act->String, tmpword)){act->count++; return 1;}; //return 1 if tmpword exist
         act = act->next;
     }
@@ -76,7 +75,6 @@ bool LookForelement(ListWord *list, char tmpword[N])
 }
 
 /***********************************/
-/* return size of list */
 int Length(ListWord *list)
 {
         int n=0;
@@ -89,11 +87,9 @@ int Length(ListWord *list)
         return n;
 }
 
-
 /*******************************************/
 void Clear(ListWord *list)
 {
-
         while(list->first)
           {
              Word *tmp = list->first;
@@ -105,7 +101,6 @@ void Clear(ListWord *list)
 /*******************************************/
 
 void TextToWord(char line[LINE_MAX], ListWord *list){
-   
 
   int i = 0;
   int j = 0;
@@ -120,10 +115,10 @@ void TextToWord(char line[LINE_MAX], ListWord *list){
                
                     j = 0;
                     
-                    if(LookForelement(list, tmpword)){
+                    if(LookForelement(list, tmpword)){//return true if tmpword exist and increment count
 
                     }else{
-                    	insert(list,  tmpword);
+                    	insert(list,  tmpword); //creat new node with tmpword
 
                           }
                      memset(&tmpword[0], 0, sizeof(tmpword));// make empty tmpword
