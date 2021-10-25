@@ -19,3 +19,9 @@ Dans chaque ligne on parcourt caractère par cractère, et on stocke dans tmpwor
 Si le caractère suivant est un ' ' alors, on l'ignore et on ajoute tmpword dans un nouveau noeud de la liste.
 
 ## Limitation
+Pour que ce programme affiche des resultats corrects, il faudrait que:
+	Dans le fichier texte, il n'y a qu'une phrase par ligne.
+	Il n'y ait pas d'espace au début des lignes.
+	Il est sensible à a casses.
+	
+
