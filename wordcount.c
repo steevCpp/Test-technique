@@ -52,10 +52,9 @@ void printList(ListWord *list)
 
     while (act != NULL)
     {
-        printf("%d ********** %s\n ", act->count,act->String);
+        printf("%d %s\n ", act->count,act->String);
         act = act->next;
     }
-    printf("--- In printList ----\n");
 }
 /*************************************/
 bool LookForelement(ListWord *list, char tmpword[N])
@@ -69,11 +68,10 @@ bool LookForelement(ListWord *list, char tmpword[N])
 
     while (act != NULL)
     {
-        printf("%s\n ",act->String);
+        //printf("%s\n ",act->String);
 		if (!strcmp(act->String, tmpword)){act->count++; return 1;}; //return 1 if tmpword exist
         act = act->next;
     }
-    printf("-----LookForelement-----\n");
     return 0;
 }
 
@@ -124,10 +122,10 @@ void TextToWord(char line[LINE_MAX], ListWord *list){
                     //printf("%s\n", tmpword);
                     
                     if(LookForelement(list, tmpword)){
-                    	printf("incrementation\n");
+
                     }else{
                     	insert(list,  tmpword);
-                    	printf("insertion\n");
+
                           }
                      memset(&tmpword[0], 0, sizeof(tmpword));
                     //strcpy(tmpword, " ");// make empty tmpword
