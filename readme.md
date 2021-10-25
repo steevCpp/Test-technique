@@ -1,12 +1,15 @@
 
 ## Test d'exécution
+```
+cmake . 
+```
 
 ```
 Make 
 ```
 
 ```
-./wordcount files/*.txt
+./bin/wordcount files/*.txt
 ```
 ## Algorithme
 On crée une liste chaînée (une pile)) qui va contenir trois champs:
