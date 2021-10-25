@@ -20,7 +20,8 @@ int main(int argc, char* argv[]){
 
     ListWord *list = initialisation();
 
-    fichier = fopen(argv[1], "r");
+  for(int j=1;j<argc;j++){
+    fichier = fopen(argv[j], "r");
 
     if (fichier != NULL)
     {   
@@ -34,7 +35,7 @@ int main(int argc, char* argv[]){
 		
         fclose(fichier); //Close the file
     }
-
+  }
 
    printList(list);
    printf("%d total words \n", TotalWord(list));
