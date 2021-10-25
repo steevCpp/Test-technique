@@ -1,5 +1,5 @@
 
-## Commande d'exécution
+## Test d'exécution
 
 ```
 Make 
@@ -8,3 +8,7 @@ Make
 ```
 .\wordcount text.txt
 ```
+## Algorithme
+
+
+## Limitation
