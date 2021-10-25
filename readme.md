@@ -21,8 +21,8 @@ On crée une liste chaînée (une pile)) qui va contenir trois champs:
 	next qui est un pointeur vers l'élément suivant.
 
 On ouvre le fichier et on parcourt ligne par ligne(les lignes commençants par # ou ' ' sont ignorées).
-Dans chaque ligne on parcourt caractère par cractère, et on stocke dans tmpword.
-Si le caractère suivant est un ' ' alors, on l'ignore et on ajoute tmpword dans un nouveau noeud de la liste.
+Dans chaque ligne on parcourt caractère par caractère, et on stocke dans tmpword.
+Si le caractère suivant est un ' '(vide) alors on l'ignore et on ajoute tmpword dans un nouveau noeud de la liste.
 
 ## Limitation
 Cas non gérées:
@@ -35,8 +35,8 @@ Cas non gérées:
 
 ## Extension
 
-Pour optimiser les performances, on peut faire du paralléliste.
+Pour optimiser les performances, on peut faire du parallélisme.
 
-On attribue à chaque processus un certain nombre de fichiers textes, ils effectuent le traitement et une collecte est faite à la fin reconstituer le resultat final.
+On attribue à chaque processus un certain nombre de fichiers textes, ils effectuent le traitement et une collecte est faite à la fin pour constituer le resultat final.
 
 
