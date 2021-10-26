@@ -5,7 +5,7 @@ cmake .
 ```
 
 ```
-Make 
+make 
 ```
 
 ```
